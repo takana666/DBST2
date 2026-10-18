@@ -6,7 +6,7 @@
     const map=new Map(nodes.map(n=>[n.path,n]));const code=p=>map.get(jp(p))?.lineageCode||'';
     const funnyCodes=['FFFF','FFMF','FMFF','FMMF','MFFF','MFMF','MMFF','MMMF'].map(code);
     const funny=funnyCodes.every(Boolean)&&new Set(funnyCodes).size>=7;
-    const sirePerfect=['FFFMF','FFMMF','FMFMF','FMMMF'].map(code),damFunny=['MFFF','MFMF','MMFF','MMMF'].map(code),sorted=a=>[...a].sort().join('|');
+    const sirePerfect=['FFFMF','FFMMF','FMFMF','FMMMF'].map(code),damFunny=['MFFF','MFMF','MMFF','MMMF'].map(code),sorted=a=>[...new Set(a)].sort().join('|');
     const splendid=sirePerfect.every(Boolean)&&damFunny.every(Boolean)&&new Set(damFunny).size>=3&&sorted(sirePerfect)===sorted(damFunny);
     const canon=[...new Set((G.nicks||[]).flatMap(([a,b])=>[plain(a),plain(b)]))];
     const canonical=s=>{const raw=plain(s);if(!raw||canon.includes(raw))return raw;let best='',d=Infinity;for(const n of canon){const x=distance(raw,n);if(x<d){best=n;d=x}}return d<=Math.max(1,Math.floor(best.length*.2))?best:raw};
