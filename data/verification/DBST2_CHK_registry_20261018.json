@@ -1,0 +1,121 @@
+{
+  "updated_at": "2026-10-18",
+  "meaning": "面白/凝った等の重複表示を確認済み。配合検証件数・所有馬網羅とは別管理。",
+  "rule": {
+    "cutoff": "2026-10-17",
+    "older_data_with_chk": "CHK済み",
+    "older_data_without_chk_record": "CHK記録なし・重複表示の再確認対象",
+    "missing_mark_means": "未実施とは断定しない",
+    "newer_data": "データ日と再キャプチャ状況を別記。日付のみでCHK済みにしない"
+  },
+  "evidence": [
+    {
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "method": "一覧画像上のPowerPointテキストCHKの配置とカード位置の照合"
+    },
+    {
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "method": "PowerPointテキストCHKの配置と一覧カード位置の照合。説明文内のchkは対象頭数に数えない。"
+    }
+  ],
+  "mares": [
+    {
+      "name": "スタセリタ",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "notes": "資料注記で重複なしを確認"
+    },
+    {
+      "name": "グレースアドラー",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "notes": "資料注記で重複なしを確認"
+    },
+    {
+      "name": "シーブリーズライフ",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "notes": "資料注記で重複なしを確認"
+    },
+    {
+      "name": "トシザコジーン",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "notes": "資料注記で重複なしを確認"
+    },
+    {
+      "name": "オーサムフェザー",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "notes": "資料注記で重複なしを確認"
+    },
+    {
+      "name": "ラスティングソング",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-1.pptx",
+      "slide": 10,
+      "notes": "重複ありのため同資料p.12-17へ差替え済み"
+    },
+    {
+      "name": "ブルーメンブラット",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    },
+    {
+      "name": "マダムチェロキー",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    },
+    {
+      "name": "ジンジャ",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    },
+    {
+      "name": "ダークサファイア",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    },
+    {
+      "name": "ジャストルッキング",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    },
+    {
+      "name": "ダフィーナ",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "source": "20261018-2.pptx",
+      "slide": 2,
+      "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    }
+  ]
+}
