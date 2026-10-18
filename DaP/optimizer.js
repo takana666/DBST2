@@ -73,7 +73,7 @@ function crossesOf(snap){
 function metrics(source){
   const snap=propagated(source),code=p=>theoryLineageAt(snap,p);
   const funnyCodes=funnyPaths.map(code),funny=funnyCodes.every(Boolean)&&new Set(funnyCodes).size>=7;
-  const sire=splendidSirePaths.map(code),dam=splendidDamPaths.map(code),sorted=a=>[...a].sort().join('|');
+  const sire=splendidSirePaths.map(code),dam=splendidDamPaths.map(code),sorted=a=>[...new Set(a)].sort().join('|');
   const splendid=sire.every(Boolean)&&dam.every(Boolean)&&new Set(dam).size>=3&&sorted(sire)===sorted(dam);
   const paternal=elaborateEntries(snap,'F');
   const maternal=elaborateEntries(snap,'M');
@@ -111,11 +111,11 @@ function funnyPossible(snap,fs,cache){
   for(const path of funnyPaths){const opts=optionCodes(path,snap,fs,cache);if(!opts.size)return false;const next=new Set();for(const mask of masks)for(const c of opts){const i=codeIndex.get(c);if(i!==undefined)next.add(mask|(1<<i))}masks=next}
   return [...masks].some(m=>{let n=0;while(m){n+=m&1;m>>>=1}return n>=7});
 }
-function multisetKeys(paths,snap,fs,cache,requireThree){
+function lineageSetKeys(paths,snap,fs,cache,requireThree){
   let states=[[]];for(const path of paths){const opts=[...optionCodes(path,snap,fs,cache)];if(!opts.length)return new Set();const next=[];for(const a of states)for(const c of opts)next.push([...a,c]);states=next}
-  return new Set(states.filter(a=>!requireThree||new Set(a).size>=3).map(a=>a.sort().join('|')));
+  return new Set(states.filter(a=>!requireThree||new Set(a).size>=3).map(a=>[...new Set(a)].sort().join('|')));
 }
-function splendidPossible(snap,fs,cache){const a=multisetKeys(splendidSirePaths,snap,fs,cache,false),b=multisetKeys(splendidDamPaths,snap,fs,cache,true);for(const x of a)if(b.has(x))return true;return false}
+function splendidPossible(snap,fs,cache){const a=lineageSetKeys(splendidSirePaths,snap,fs,cache,false),b=lineageSetKeys(splendidDamPaths,snap,fs,cache,true);for(const x of a)if(b.has(x))return true;return false}
 function possibleNames(side,snap,fs){
   const names=new Set(elaborateEntries(snap,side).map(([,h])=>norm(h.name)));
   fs.filter(base=>base.startsWith(side)&&base.length<=4).forEach(base=>(Number(document.getElementById('optimizerDepth')?.value)>0?[...window.DABISTA2_DATA.sires,...window.DABISTA2_DATA.dams]:candidatesFor(base,snap)).forEach(h=>{
@@ -248,8 +248,8 @@ function deepScore(snap,c){
   for(const k of c.theories)if(m[k])score+=350;
   if(c.theories.includes('funny')||c.theories.includes('perfect'))score+=new Set(funnyPaths.map(p=>theoryLineageAt(snap,p)).filter(Boolean)).size*25;
   if(c.theories.includes('splendid')||c.theories.includes('perfect')){
-    const sire=splendidSirePaths.map(p=>snap[p]?.lineage).filter(Boolean),dam=splendidDamPaths.map(p=>snap[p]?.lineage).filter(Boolean),left=[...dam];let n=0;
-    for(const x of sire){const j=left.indexOf(x);if(j>=0){n++;left.splice(j,1)}}score+=n*50+new Set(dam).size*10;
+    const sire=new Set(splendidSirePaths.map(p=>snap[p]?.lineage).filter(Boolean)),dam=new Set(splendidDamPaths.map(p=>snap[p]?.lineage).filter(Boolean));
+    const n=[...sire].filter(x=>dam.has(x)).length;score+=n*50+dam.size*10;
   }
   if(c.cross==='no')score-=m.crosses*90;else if(c.cross==='yes'&&m.crosses>0)score+=50;
   const key=document.getElementById('optimizerSort').value;
