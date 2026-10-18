@@ -18,6 +18,16 @@
       "source": "20261018-2.pptx",
       "slide": 2,
       "method": "PowerPointテキストCHKの配置と一覧カード位置の照合。説明文内のchkは対象頭数に数えない。"
+    },
+    {
+      "source": "20261018-3(1).pptx",
+      "slide": 2,
+      "method": "一覧のCHK位置と注記。タイタンクイーン・カネツプリンセスは重複あり、マイネテレジアはなし。"
+    },
+    {
+      "source": "20261018-4.pptx",
+      "slide": 2,
+      "method": "一覧CHKおよび注記。キラーグレイシス・マンビアは重複なし、シンプリーラヴィシングは重複あり再撮影。"
     }
   ],
   "mares": [
@@ -116,6 +126,60 @@
       "source": "20261018-2.pptx",
       "slide": 2,
       "notes": "一覧のCHKおよび資料注記で面白/凝などの重複なしを確認。未検証の所有種牡馬を検証済みとする意味ではない。"
+    },
+    {
+      "name": "タイタンクイーン",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "duplicate_display_found": true,
+      "source": "20261018-3(1).pptx",
+      "slide": 2,
+      "notes": "重複表示あり。今回の成立集合へ差替え済み（p.5-11）"
+    },
+    {
+      "name": "カネツプリンセス",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "duplicate_display_found": true,
+      "source": "20261018-3(1).pptx",
+      "slide": 2,
+      "notes": "重複表示あり。今回の成立集合へ差替え済み（p.14-17）"
+    },
+    {
+      "name": "マイネテレジア",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "duplicate_display_found": false,
+      "source": "20261018-3(1).pptx",
+      "slide": 2,
+      "notes": "資料注記で重複表示なしを確認。配合件数は20261013-3の202件のまま。"
+    },
+    {
+      "name": "キラーグレイシス",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "duplicate_display_found": false,
+      "source": "20261018-4.pptx",
+      "slide": 2,
+      "notes": "資料注記で重複表示なしを確認。既存配合記録と確認頭数は保持。"
+    },
+    {
+      "name": "マンビア",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "duplicate_display_found": false,
+      "source": "20261018-4.pptx",
+      "slide": 2,
+      "notes": "資料注記で重複表示なしを確認。既存配合記録と確認頭数は保持。"
+    },
+    {
+      "name": "シンプリーラヴィシング",
+      "status": "CHK済み",
+      "duplicate_display_checked": true,
+      "duplicate_display_found": true,
+      "source": "20261018-4.pptx",
+      "slide": 2,
+      "notes": "面白/凝の重複表示あり。p.4-6の再撮影分へ差替え済み。"
     }
   ]
 }
